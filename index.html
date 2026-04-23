@@ -2,6 +2,10 @@
 <html>
 <head>
     <title>Hotbeans Web - Home</title>
+
+    <!-- MAKES THE PAGE MOBILE FRIENDLY -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
         body {
             margin: 0;
@@ -18,8 +22,8 @@
         }
 
         .logo-area img {
-	width: 200px; /* You can change this */
-	height: auto;
+            width: 200px;
+            height: auto;
         }
 
         /* NAVIGATION */
@@ -88,13 +92,67 @@
 
         /* FOOTER */
         .footer {
-	background: #222;
-	color: #FFFFFF;
-	padding: 15px;
-	text-align: center;
-	margin-top: 30px;
-	font-size: 15px;
-	border-top: 4px solid #ff3c00;
+            background: #222;
+            color: #FFFFFF;
+            padding: 15px;
+            text-align: center;
+            margin-top: 30px;
+            font-size: 15px;
+            border-top: 4px solid #ff3c00;
+        }
+
+        /* ----------------------------- */
+        /* MOBILE FRIENDLY ADJUSTMENTS   */
+        /* ----------------------------- */
+        @media (max-width: 768px) {
+
+            .hero {
+                padding: 30px;
+            }
+
+            .hero h1 {
+                font-size: 26px;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            .box {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .box img {
+                width: 100%;
+                height: auto;
+            }
+
+            .nav a {
+                display: inline-block;
+                margin: 8px;
+                font-size: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            .hero h1 {
+                font-size: 22px;
+            }
+
+            .hero p {
+                font-size: 14px;
+            }
+
+            .nav a {
+                display: block;
+                margin: 10px 0;
+            }
+
+            .logo-area img {
+                width: 150px;
+            }
         }
     </style>
 </head>
@@ -102,7 +160,6 @@
 
     <!-- LOGO AREA -->
     <div class="logo-area">
-        <!-- Replace this with your logo image -->
         <img src="images/hotbeanslogo2.png" alt="Hotbeans Web Logo">
     </div>
 
