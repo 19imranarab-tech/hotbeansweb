@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -132,8 +131,21 @@
             const email = document.querySelector('input[type="email"]').value.trim();
             const reason = document.querySelector('textarea').value.trim();
 
+            // Check if fields are empty
             if (!name || !email || !reason) {
                 alert('Please fill out all fields before submitting.');
+                return false;
+            }
+
+            // Check if email contains @
+            if (!email.includes("@")) {
+                alert('Please enter a valid email address with an "@" symbol.');
+                return false;
+            }
+
+            // Check if email ends with .com or .co.uk
+            if (!(email.endsWith(".com") || email.endsWith(".co.uk"))) {
+                alert('Please enter a valid email ending with ".com" or ".co.uk".');
                 return false;
             }
 
