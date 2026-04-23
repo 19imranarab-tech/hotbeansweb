@@ -1,8 +1,11 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Hotbeans Web - Meet the Staff</title>
+    <title>Hotbeans Web - Courses</title>
+
+    <!-- MOBILE FRIENDLY -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
         body {
             margin: 0;
@@ -31,13 +34,19 @@
         }
 
         .nav a {
-            margin-right: 15px;
             text-decoration: none;
             color: white;
             font-weight: bold;
+            padding: 0 12px;
+            border-right: 2px solid white;
         }
 
-        /* HERO */
+        /* Remove last line */
+        .nav a:last-child {
+            border-right: none;
+        }
+
+        /* HERO SECTION */
         .hero {
             padding: 50px;
             background: #ffe2d4;
@@ -57,36 +66,33 @@
             color: #333;
         }
 
-        /* STAFF SECTION */
+        /* CONTENT BOXES */
         .section {
             padding: 20px;
             max-width: 900px;
             margin: auto;
         }
 
-        .staff-box {
+        .box {
             background: #ffffff;
-            display: flex;
-            border: 1px solid #ddd;
-            margin-bottom: 15px;
             padding: 15px;
+            margin-bottom: 12px;
+            border: 1px solid #ddd;
         }
 
-        .staff-box img {
-            width: 120px;
-            height: 120px;
-            margin-right: 20px;
-        }
-
-        .staff-info h3 {
-            margin: 0;
+        .box h3 {
+            margin-top: 0;
             color: #ff3c00;
         }
 
-        .staff-info p {
-            margin: 4px 0;
+        .box p {
             font-size: 15px;
             color: #333;
+        }
+
+        .box a {
+            color: #ff3c00;
+            font-weight: bold;
         }
 
         /* FOOTER */
@@ -99,13 +105,68 @@
             font-size: 15px;
             border-top: 4px solid #ff3c00;
         }
+
+        /* ----------------------------- */
+        /* MOBILE FRIENDLY ADJUSTMENTS   */
+        /* ----------------------------- */
+        @media (max-width: 768px) {
+
+            .hero {
+                padding: 30px;
+            }
+
+            .hero h1 {
+                font-size: 26px;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            .nav a {
+                display: inline-block;
+                margin: 6px 4px;
+                border-right: none;
+                border-bottom: 1px solid white;
+                padding-bottom: 6px;
+            }
+
+            .nav a:last-child {
+                border-bottom: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            .hero h1 {
+                font-size: 22px;
+            }
+
+            .hero p {
+                font-size: 14px;
+            }
+
+            .nav a {
+                display: block;
+                margin: 10px 0;
+                border-bottom: 1px solid white;
+            }
+
+            .nav a:last-child {
+                border-bottom: none;
+            }
+
+            .logo-area img {
+                width: 150px;
+            }
+        }
     </style>
 </head>
 <body>
 
     <!-- LOGO AREA -->
     <div class="logo-area">
-        <img src="images/hotbeanslogo2.png" alt="Hotbeans Logo">
+        <img src="images/hotbeanslogo2.png" alt="Hotbeans Web Logo">
     </div>
 
     <!-- NAVIGATION -->
@@ -120,38 +181,35 @@
 
     <!-- HERO -->
     <div class="hero">
-        <h1>Meet the Staff</h1>
-        <p>Get to know the trainers who guide new developers into the industry.</p>
+        <h1>Courses</h1>
+        <p>Learn the essential skills needed to begin your journey into web development.</p>
     </div>
 
-    <!-- STAFF SECTION -->
+    <!-- COURSE CONTENT -->
     <div class="section">
 
-        <div class="staff-box">
-            <img src="images/johnsmith.png" alt="Staff Icon">
-            <div class="staff-info">
-                <h3>John Smith</h3>
-                <p><strong>Job Description:</strong> Lead Web Development Trainer</p>
-                <p><strong>Quote:</strong> “Helping new developers grow is my passion.”</p>
-            </div>
+        <div class="box">
+            <h3>HTML for Beginners (W3Schools)</h3>
+            <p>Learn the basics of HTML, including tags, structure, and how webpages are built. This course is perfect for beginners starting their web‑development journey.</p>
+            <p><a href="https://www.w3schools.com/html/" target="_blank">Start HTML Course</a></p>
         </div>
 
-        <div class="staff-box">
-            <img src="images/sarahjohnson.png" alt="Staff Icon">
-            <div class="staff-info">
-                <h3>Sarah Johnson</h3>
-                <p><strong>Job Description:</strong> HTML & CSS Specialist</p>
-                <p><strong>Quote:</strong> “Clear structure builds stronger websites.”</p>
-            </div>
+        <div class="box">
+            <h3>CSS Fundamentals (freeCodeCamp)</h3>
+            <p>Understand how to style webpages using CSS. Learn colours, fonts, layout, spacing, and how to make your website look clean and professional.</p>
+            <p><a href="https://www.freecodecamp.org/learn/2022/responsive-web-design/" target="_blank">Start CSS Course</a></p>
         </div>
 
-        <div class="staff-box">
-            <img src="images/michaellee.png" alt="Staff Icon">
-            <div class="staff-info">
-                <h3>Michael Lee</h3>
-                <p><strong>Job Description:</strong> JavaScript Fundamentals Trainer</p>
-                <p><strong>Quote:</strong> “Every great developer starts with the basics.”</p>
-            </div>
+        <div class="box">
+            <h3>JavaScript Basics (Codecademy)</h3>
+            <p>Learn how JavaScript adds interactivity to websites. This course covers variables, functions, events, and beginner‑level scripting.</p>
+            <p><a href="https://www.codecademy.com/learn/introduction-to-javascript" target="_blank">Start JavaScript Course</a></p>
+        </div>
+
+        <div class="box">
+            <h3>Build a Complete Website (freeCodeCamp)</h3>
+            <p>Put your HTML, CSS, and JavaScript skills together to build real projects. This course guides you through creating responsive, modern webpages.</p>
+            <p><a href="https://www.freecodecamp.org/learn/front-end-development-libraries/" target="_blank">Start Website‑Building Course</a></p>
         </div>
 
     </div>
