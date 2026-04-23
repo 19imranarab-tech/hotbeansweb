@@ -34,10 +34,16 @@
         }
 
         .nav a {
-            margin-right: 15px;
             text-decoration: none;
             color: white;
             font-weight: bold;
+            padding: 0 12px;
+            border-right: 2px solid white;
+        }
+
+        /* Remove last line */
+        .nav a:last-child {
+            border-right: none;
         }
 
         /* HERO */
@@ -130,8 +136,14 @@
 
             .nav a {
                 display: inline-block;
-                margin: 8px;
-                font-size: 15px;
+                margin: 6px 4px;
+                border-right: none; /* remove lines on mobile */
+                border-bottom: 1px solid white; /* optional: add bottom lines */
+                padding-bottom: 6px;
+            }
+
+            .nav a:last-child {
+                border-bottom: none;
             }
         }
 
@@ -148,6 +160,11 @@
             .nav a {
                 display: block;
                 margin: 10px 0;
+                border-bottom: 1px solid white;
+            }
+
+            .nav a:last-child {
+                border-bottom: none;
             }
 
             .logo-area img {
