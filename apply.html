@@ -2,6 +2,10 @@
 <html>
 <head>
     <title>Hotbeans Web - Apply</title>
+
+    <!-- MOBILE FRIENDLY -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
         body {
             margin: 0;
@@ -30,10 +34,16 @@
         }
 
         .nav a {
-            margin-right: 15px;
             text-decoration: none;
             color: white;
             font-weight: bold;
+            padding: 0 12px;
+            border-right: 2px solid white;
+        }
+
+        /* Remove last line */
+        .nav a:last-child {
+            border-right: none;
         }
 
         /* HERO */
@@ -122,6 +132,61 @@
             margin-top: 30px;
             font-size: 15px;
             border-top: 4px solid #ff3c00;
+        }
+
+        /* ----------------------------- */
+        /* MOBILE FRIENDLY ADJUSTMENTS   */
+        /* ----------------------------- */
+        @media (max-width: 768px) {
+
+            .hero {
+                padding: 30px;
+            }
+
+            .hero h1 {
+                font-size: 26px;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            .nav a {
+                display: inline-block;
+                margin: 6px 4px;
+                border-right: none;
+                border-bottom: 1px solid white;
+                padding-bottom: 6px;
+            }
+
+            .nav a:last-child {
+                border-bottom: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            .hero h1 {
+                font-size: 22px;
+            }
+
+            .hero p {
+                font-size: 14px;
+            }
+
+            .nav a {
+                display: block;
+                margin: 10px 0;
+                border-bottom: 1px solid white;
+            }
+
+            .nav a:last-child {
+                border-bottom: none;
+            }
+
+            .logo-area img {
+                width: 150px;
+            }
         }
     </style>
 
